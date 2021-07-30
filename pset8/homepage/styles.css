@@ -1,0 +1,59 @@
+body {
+    background-color:black;
+    color: #F0F8FF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+header {
+  padding: 17px;
+  text-align: center;
+  background: black;
+  font-size: 30px;
+}
+
+address {
+    background-color: black;
+    color: #F0F8FF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 0.7;
+    text-align: left;
+}
+
+.nav nav-link {
+  color: #F0F8FF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f1f1f1;
+  background-color: #708090;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #708090;
+    color: #F0F8FF;
+}
+
+.nav-pills .nav-link {
+    color: #F0F8FF;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+input[type=submit] {
+  background-color: #F0F8FF;
+  border: none;
+  color: #2F4F4F;
+  text-decoration: none;
+  margin: 4px 2px;
+
+}

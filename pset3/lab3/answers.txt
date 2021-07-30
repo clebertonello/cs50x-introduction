@@ -1,0 +1,11 @@
+sort1 uses: BUBBLE
+
+How do you know?: It showed the fastest process time in sorted case for any number of values.
+
+sort2 uses: MERGE
+
+How do you know?: It took roughly the same amount of time to process each file, increasing its time as the number of values increased. It also was the fastest process in almost every case.
+
+sort3 uses: SELECTION
+
+How do you know?: As in MERGE, it took roughly the same amount of time do process each file, but the process time was significantly higher than sort2.

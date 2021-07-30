@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            function checkanswer_1(clicked_id)
+            {
+                // returning ID = https://stackoverflow.com/questions/4825295/onclick-to-get-the-id-of-the-clicked-button
+                let id = clicked_id;
+                // string compare = https://www.w3schools.com/jsref/jsref_localecompare.asp
+                let comp = id.localeCompare('answer1');
+                let y = document.querySelector('#question1');
+                if (comp == 0)
+                {
+                    document.getElementById(id).style.backgroundColor = 'green';
+                    y.innerHTML = 'Correct';
+                }
+                else
+                {
+                    document.getElementById(id).style.backgroundColor = 'red';
+                    y.innerHTML = 'Incorrect';
+                }
+            }
+
+            function checkanswer_2()
+            {
+                let answer = document.querySelector('#freeanswer_text').value
+                let comp1 = answer.localeCompare('1989');
+                let comp2 = answer.localeCompare('89');
+                let y = document.querySelector('#question2');
+                if (comp1 == 0 || comp2 == 0)
+                {
+                    document.querySelector('#freeanswer_text').style.backgroundColor = 'green';
+                    y.innerHTML = 'Correct';
+                }
+                else
+                {
+                    document.querySelector('#freeanswer_text').style.backgroundColor = 'red';
+                    y.innerHTML = 'Incorrect';
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>When did Apollo 11 land on the moon?</h3>
+                <p id="question1"></p>
+                    <button onclick="checkanswer_1(this.id)" id="answer1">1969</button>
+                    <button onclick="checkanswer_1(this.id)" id="answer2">1972</button>
+                    <button onclick="checkanswer_1(this.id)" id="answer3">1968</button>
+                    <button onclick="checkanswer_1(this.id)" id="answer4">1989</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3> Which year did the wall of Berlin fall?</h3>
+                <p id="question2"></p>
+                    <input id="freeanswer_text" type="text" placeholder="Insert your answer here!">
+                    <button onclick="checkanswer_2()" id="freeanswer_button">Check Answer</button>
+            </div>
+
+        </div>
+    </body>
+</html>
